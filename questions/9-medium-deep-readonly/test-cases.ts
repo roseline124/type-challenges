@@ -1,9 +1,5 @@
 import { Equal, Expect } from '@type-challenges/utils'
 
-type cases = [
-  Expect<Equal<DeepReadonly<X>, Expected>>,
-]
-
 type X = {
   a: () => 22
   b: string
@@ -37,3 +33,5 @@ type Expected = {
     }
   }
 }
+
+type cases = [Expect<Equal<DeepReadonly<X>, Expected>>]
