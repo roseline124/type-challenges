@@ -8,8 +8,10 @@ type Bar = {
   name: string
   age: string
   gender: number
+  address: string
 }
 
 type cases = [
-  Expect<Equal<Diff<Foo, Bar>, { gender: number }>>
+  Expect<Equal<Diff<Foo, Bar>, { gender: number; address: string }>>,
+  Expect<Equal<Diff<Bar, Foo>, { gender: number; address: string }>>
 ]

@@ -1,16 +1,24 @@
 import { Equal, Expect } from '@type-challenges/utils'
 
 type Foo = {
-  a: number;
-  b: string;
-};
+  a: number
+  b: string
+}
 type Bar = {
-  b: number;
-};
+  a: string
+  b: number
+  c: boolean
+}
 
 type cases = [
-  Expect<Equal<Merge<Foo, Bar>, {
-	a: number;
-	b: number;
-  }>>
+  Expect<
+    Equal<
+      Merge<Foo, Bar>,
+      {
+        a: string
+        b: number
+        c: boolean
+      }
+    >
+  >
 ]
